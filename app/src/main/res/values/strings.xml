@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Campus Events</string>
+    <string name="no_events_found_ntap_to_add_your_first_event">No events found\nTap + to add your first event</string>
+    <string name="todo">TODO</string>
+    <string name="date">Date *</string>
+    <string name="time">Time *</string>
+    <string name="cancel">Cancel</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="chipGroup" type="id" />
+    <item name="textView" type="id" />
+    <item name="fabAddEvent" type="id" />
+    <item name="emptyStateText" type="id" />
+    <item name="eventsRecyclerView" type="id" />
+    <item name="toolbar" type="id" />
+</resources>
