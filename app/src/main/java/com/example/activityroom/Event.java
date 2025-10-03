@@ -10,6 +10,7 @@ public class Event implements Serializable {
     private Date date;
     private String time;
     private String venue;
+    private String imagePath; // Add this field
 
     public Event() {}
 
@@ -20,6 +21,7 @@ public class Event implements Serializable {
         this.date = date;
         this.time = time;
         this.venue = venue;
+        this.imagePath = ""; // Initialize as empty
     }
 
     public String getId() { return id; }
@@ -28,4 +30,6 @@ public class Event implements Serializable {
     public Date getDate() { return date; }
     public String getTime() { return time; }
     public String getVenue() { return venue; }
+    public String getImagePath() { return imagePath; }
+    public void setImagePath(String imagePath) { this.imagePath = imagePath; }
 }
