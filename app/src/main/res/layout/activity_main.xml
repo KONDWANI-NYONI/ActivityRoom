@@ -1,50 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#F5F5F5">
+    android:layout_height="match_parent">
 
-    <!-- Toolbar -->
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="#18476F"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="Campus Events Planner" />
-
-    <!-- Event List -->
-
-    <!-- Empty State -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/eventsRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="8dp" />
-
-    <TextView
-        android:id="@+id/emptyStateText"
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/backgroundImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="No events found\nTap + to add your first event"
-        android:textSize="18sp"
-        android:visibility="gone"
-        android:padding="32dp" />
+        android:scaleType="centerCrop"
+        android:src="@drawable/campus_background"
+        android:contentDescription="Campus background" />
+
+    <!-- Semi-transparent overlay to make content readable -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5" />
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#A89B85">
+
+
+        <!-- Search Bar -->
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Search events..."
+            android:layout_margin="16dp"
+            android:background="@android:color/white"
+            android:backgroundTint="@android:color/white" />
+
+        <!-- Event List -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/eventsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:background="#F5F5F5" />
+
+        <!-- Empty State -->
+        <TextView
+            android:id="@+id/emptyStateText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="No events found\nTap + to add your first event"
+            android:textSize="18sp"
+            android:visibility="gone"
+            android:padding="32dp"
+            android:background="#80FFFFFF"
+            android:textColor="#212121" />
+
+    </LinearLayout>
 
     <!-- Add Event Button -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddEvent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
         android:layout_margin="16dp"
-        android:contentDescription="TODO"
         android:src="@drawable/ic_add"
-        app:backgroundTint="#18476F"
+        android:contentDescription="Add new event"
+        app:backgroundTint="#A89B85"
         app:tint="@android:color/white" />
 
-</LinearLayout>
+</RelativeLayout>

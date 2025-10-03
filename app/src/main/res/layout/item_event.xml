@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#244F6F"
+        android:background="#A89B85"
         android:padding="16dp">
 
         <TextView
@@ -19,9 +19,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Event Title"
+            android:textColor="#1A1919"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textEventDescription"
@@ -30,7 +30,7 @@
             android:layout_marginTop="4dp"
             android:text="Event description"
             android:textSize="14sp"
-            android:textColor="#F4D573"
+            android:textColor="#FFFFFF"
             android:maxLines="2"
             android:ellipsize="end" />
 
